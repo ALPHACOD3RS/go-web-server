@@ -11,13 +11,13 @@ func GetApiKey(headers http.Header) (string, error){
 	head := headers.Get("Authorization")
 
 	if head == ""{
-		return "", errors.New("no authentication found")
+		return "", errors.New("no authentication found in the header")
 	}
 
 	vals := strings.Split(head, " ")
 
 	if len(vals) != 2{
-		return "", errors.New("malformed auth header")
+		return "", errors.New("malformed auth header please check it")
 	}
 
 	if vals[0] != "ApiKey"{

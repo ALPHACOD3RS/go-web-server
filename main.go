@@ -74,7 +74,7 @@ func main(){
 	}
 
 
-	log.Printf("The server is runing in port %v", portString);
+	log.Printf("the server is runing in port %v", portString);
 
 
 
